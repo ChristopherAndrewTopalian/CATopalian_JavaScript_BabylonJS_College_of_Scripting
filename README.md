@@ -7,6 +7,13 @@ Video: https://www.youtube.com/watch?v=tZFTY5LSRvs
 
 ---
 
+# Requirements
+### NW.js https://nwjs.io/
+
+Drag the folder named CATopalian_JavaScript_BabylonJS_College_of_Scripting onto the nw.exe icon
+
+---
+
 ### How to Download this App
 1. Click the green Code Button on this github page
 2. Choose Download ZIP
