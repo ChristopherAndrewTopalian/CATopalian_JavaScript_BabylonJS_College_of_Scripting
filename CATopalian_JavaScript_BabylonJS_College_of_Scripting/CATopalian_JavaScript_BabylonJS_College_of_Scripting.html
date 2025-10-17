@@ -400,40 +400,17 @@ let createScene = function()
     {
         for (let x = 0; x < whichArray.length; x++)
         {
-            if (x == 10)
+            // when we reach every 10th item, start a new row
+            if (x > 0 && x % 10 == 0)
             {
-                theZ += 25; //back and forward
-                theX = -70; // left and right
-            }
-
-            if (x == 20)
-            {
-                theZ += 25;
-                theX = -70;
-            }
-
-            if (x == 30)
-            {
-                theZ += 25;
-                theX = -70;
-            }
-
-            if (x == 40)
-            {
-                theZ += 25;
-                theX = -70;
-            }
-
-            if (x == 50)
-            {
-                theZ += 25;
-                theX = -70;
+                theZ += 25; // back and forward
+                theX = -70; // left and right reset
             }
 
             // front of texture orientation
             let frontSide = new BABYLON.Vector4(0, 0, 1, 1);
             
-            // back of texutre orientation
+            // back of texture orientation
             let backSide = new BABYLON.Vector4(0, 0, -1, 1);
 
             // create a mesh - CreatePlane for double
@@ -442,7 +419,9 @@ let createScene = function()
                 width: whichArray[x].theWidth,
                 height: whichArray[x].theHeight,
                 depth: whichArray[x].theDepth,
-                sideOrientation: BABYLON.Mesh.DOUBLESIDE, frontUVs: frontSide, backUVs: backSide
+                sideOrientation: BABYLON.Mesh.DOUBLESIDE,
+                frontUVs: frontSide,
+                backUVs: backSide
             }, scene);
 
             // set theMesh x position
@@ -451,18 +430,11 @@ let createScene = function()
             // set theMesh y position
             theMesh.position.y = theY;
 
+            // set theMesh z position
             theMesh.position.z = theZ;
 
-            // test to flip the back
-            
             // create a material
             let theMaterial = new BABYLON.StandardMaterial(whichArray[x].nameOfMaterial, scene);
-
-            /*
-            // if using array of objects to set the color data
-            // set the color of theMaterial
-            theMaterial.diffuseColor = new BABYLON.Color3(whichArray[x].colorR, whichArray[x].colorG, whichArray[x].colorB);
-            */
 
             // set the color of theMaterial
             theMaterial.diffuseColor = new BABYLON.Color3(1.0, 1.0, 1.0);
@@ -487,6 +459,8 @@ let createScene = function()
             theX += 15;
         }
     }
+
+    //-//
 
     let textureExample = [
         "src/media/textures/screenshots/CATopalian_JavaScript_Markdown_to_HTML_Editor.PNG",
