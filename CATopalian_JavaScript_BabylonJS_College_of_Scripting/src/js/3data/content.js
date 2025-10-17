@@ -2,6 +2,15 @@
 
 let content = [
 {
+    name: "College of Scripting Music & Science",
+    appURL: "https://christopherandrewtopalian.github.io/CATopalian_JavaScript_College_of_Scripting/CATopalian_JavaScript_College_of_Scripting.html",
+    codeURL: 'https://github.com/ChristopherAndrewTopalian',
+    description: "College of Scripting Music & Science (COSMAS)",
+    textureOffline: 'src/media/textures/titles/college_of_scripting_music_and_science_title.png',
+    // videoURL: 'https://www.youtube.com/channel/UCZs500Udkk72GoeG8KLBK_A'
+},
+
+    {
     name: "CATopalian JavaScript Markdown to HTML Editor",
     appURL: "https://christopherandrewtopalian.github.io/CATopalian_JavaScript_Markdown_to_HTML_Editor/CATopalian_JavaScript_Markdown_to_HTML_Editor.html",
     codeURL: 'https://github.com/ChristopherAndrewTopalian/CATopalian_JavaScript_Markdown_to_HTML_Editor',

@@ -12,7 +12,7 @@ Use App: https://christopherandrewtopalian.github.io/CATopalian_JavaScript_Babyl
 # Requirements
 ### NW.js https://nwjs.io/
 
-Drag the folder named **CATopalian_JavaScript_BabylonJS_College_of_Scripting** onto the **nw.exe** icon
+Drag the **folder** named **CATopalian_JavaScript_BabylonJS_College_of_Scripting** onto the **nw.exe** icon
 
 ---
 
