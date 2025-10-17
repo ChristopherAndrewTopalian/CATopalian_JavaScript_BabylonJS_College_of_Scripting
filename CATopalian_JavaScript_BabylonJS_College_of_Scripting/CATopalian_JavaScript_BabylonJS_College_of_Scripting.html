@@ -1,0 +1,812 @@
+<!-- Dedicated to God the Father -->
+<!-- All Rights Reserved Christopher Topalian Copyright 2000-2025 -->
+<!-- https://github.com/ChristopherTopalian -->
+<!-- https://github.com/ChristopherAndrewTopalian -->
+<!-- CATopalian_JavaScript_BabylonJS_College_of_Scripting.html -->
+
+<html>
+
+<head>
+
+<title> CATopalian JavaScript BabylonJS College of Scripting </title>
+
+<!-- internet source for the engine file - cdn version -->
+<!--
+<script src = "https://cdn.babylonjs.com/babylon.js"></script>
+-->
+
+<!-- local source for the engine file -->
+
+<script src="src/js/0engine/babylon.js"></script>
+
+<!-- data -->
+
+<script src = "src/js/3data/tutorials.js"></script>
+
+<script src = "src/js/3data/cubes.js"></script>
+
+<script src = "src/js/3data/content.js"></script>
+
+<style>
+
+html
+{
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+body
+{
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+#theCanvas
+{
+    width: 100%;
+    height: 100%;
+    touch-action: none;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<canvas id = 'theCanvas'></canvas>
+
+<script>
+
+// textureSource is offline or online
+// if offline uses nameOfTexture
+// if online uses urlOfTexture
+let textureSource = "offline";
+
+let canvas = document.getElementById("theCanvas");
+
+let startRenderLoop = function(engine, canvas)
+{
+    engine.runRenderLoop(function()
+    {
+        if (sceneToRender && sceneToRender.activeCamera)
+        {
+            sceneToRender.render();
+        }
+    });
+}
+
+// keep as var
+var engine = null;
+
+// keep as var
+var scene = null;
+
+// keep as var
+var sceneToRender = null;
+
+let createDefaultEngine = function()
+{
+    return new BABYLON.Engine(canvas, true,
+    {
+        preserveDrawingBuffer: true,
+        stencil: true,
+        disableWebGL2Support: false
+    });
+};
+
+let createScene = function()
+{
+    let keys =
+    {
+        forward: 0,
+        back: 0,
+        left: 0,
+        right: 0,
+        jump: 0,
+        flyUp: 0,
+        flyDown: 0
+    }
+
+    // create a Scene object
+    let scene = new BABYLON.Scene(engine);
+
+    //----//
+
+    // CAMERA
+
+    let camera = new BABYLON.ArcRotateCamera(
+    'arcCamera1', 
+    // alpha: 90 degrees, looking along Z axis
+    -Math.PI / 2,
+    // beta: degrees up/down
+    Math.PI / 2,
+    // radius is distance from player
+    2,
+    // target at origin
+    new BABYLON.Vector3(0, 0, 0),
+    scene
+);
+
+    /*
+    // alternative camera setting
+    // camera - top down
+    let camera = new BABYLON.ArcRotateCamera('arcCamera1', 0, 0, 10, BABYLON.Vector3(0, 0, 100), scene);
+    */
+
+    // CAMERA SCROLL ZOOM SPEED
+    camera.wheelPrecision = 20;
+
+    // CAMERA SPEED
+    camera.speed = 20;
+
+    //camera.radius = -20; // distance from player
+
+    // camera.attachControl(canvas, false);
+
+    // Attach control
+    camera.attachControl(canvas, false);
+
+    // camera position
+    //camera.setPosition(new BABYLON.Vector3(0, 0, -70));
+
+    camera.checkCollisions = true;
+
+    camera.applyGravity = true;
+
+    // CAMERA - how close to object
+    camera.lowerRadiusLimit = 0;
+
+    // CAMERA - how far from object
+    camera.upperRadiusLimit = 100;
+
+    camera.keysUp = [];
+    camera.keysDown = [];
+    camera.keysLeft = [];
+    camera.keysRight = [];
+
+    //----//
+
+    // PLAYER
+
+    // create player
+    let player = BABYLON.MeshBuilder.CreateBox("Player", {
+        width: 0.5,
+        height: 0.5,
+        depth: 0.5
+    }, scene);
+
+    // player starting position
+    player.position.x = -60;
+    player.position.y = 25.0;
+    player.position.z = -60;
+
+    //----//
+
+    // player material
+    let material001 = new BABYLON.StandardMaterial('Material001', scene);
+
+    // player material color
+    material001.emissiveColor = new BABYLON.Color3(0, 0.58, 0.86);
+
+    // player texture
+    material001.diffuseTexture = new BABYLON.Texture("src/media/textures/sky/sky.jpg");
+
+    // no specular glare, by setting it to 0, 0, 0
+    material001.specularColor = new BABYLON.Color3(0.0, 0.0, 0.0);
+
+    material001.alpha = 0.5;
+
+    player.material = material001;
+
+    // camera follows player
+    camera.setTarget(player);
+
+    //----//
+
+    let speed = 0.5;
+
+    player.update = function()
+    {
+        let cameraForwardRayPosition = camera.getForwardRay().direction;
+
+        let cameraForwardRayPositionWithoutY = new BABYLON.Vector3(cameraForwardRayPosition.x, 0, cameraForwardRayPosition.z);
+
+        if (keys)
+        {
+            if (keys.flyUp)
+            {
+                player.locallyTranslate(new BABYLON.Vector3(0, speed, 0));
+            }
+
+            if (keys.flyDown)
+            {
+                player.locallyTranslate(new BABYLON.Vector3(0, -speed, 0));
+            }
+
+            if (keys.left)
+            {
+                player.locallyTranslate(new BABYLON.Vector3(-speed, 0, 0));
+            }
+
+            if (keys.right)
+            {
+                player.locallyTranslate(new BABYLON.Vector3(speed, 0, 0));
+            }
+
+            if (keys.forward)
+            {
+                player.lookAt(player.position.add(cameraForwardRayPositionWithoutY), 0, 0, 0);
+
+                player.position = player.position.add(new BABYLON.Vector3(cameraForwardRayPosition.x * speed, 0, cameraForwardRayPosition.z * speed));
+            }
+
+            if (keys.back)
+            {
+                player.lookAt(player.position.add(cameraForwardRayPositionWithoutY), 0, 0, 0);
+
+                player.position = player.position.add(new BABYLON.Vector3(-cameraForwardRayPosition.x *
+                    speed, 0, -cameraForwardRayPosition.z * speed));
+            }
+        }
+    }
+
+    engine.runRenderLoop(function()
+    {
+        if (player != null)
+        {
+            player.update();
+        }
+    });
+
+    window.addEventListener('keydown', handleKeyDown, false);
+
+    window.addEventListener('keyup', handleKeyUp, false);
+
+    let action = 16;
+
+    function handleKeyDown(evt)
+    {
+        // page up or f
+        if (evt.keyCode == 33 || evt.keyCode == 70)
+        {
+            keys.flyUp = 1; // f
+        }
+
+        // page down or c
+        if (evt.keyCode == 34 || evt.keyCode == 67)
+        {
+            keys.flyDown = 1; // f
+        }
+
+        if (evt.keyCode == 65 || evt.key == 'ArrowLeft')
+        {
+            keys.left = 1; // Letter A
+        }
+
+        if (evt.keyCode == 68 || evt.key == 'ArrowRight')
+        {
+            keys.right = 1; // Letter D
+        }
+
+        if (evt.keyCode == 87 || evt.key == 'ArrowUp')
+        {
+            keys.forward = 1; // Letter W
+        }
+
+        if (evt.keyCode == 83 || evt.key == 'ArrowDown')
+        {
+            keys.back = 1; // Letter S
+        }
+
+        if (action !== evt.keyCode)
+        {
+            action = evt.keyCode;
+
+            console.log(action);
+        }
+    }
+
+    function handleKeyUp(evt)
+    {
+        if (evt.keyCode == 32)
+        {
+            keys.jump = 0;
+        }
+
+        // for page up or letter f
+        if (evt.keyCode == 33 || evt.keyCode == 70)
+        {
+            keys.flyUp = 0;
+        }
+
+        // page down or letter c
+        if (evt.keyCode == 34 || evt.keyCode == 67)
+        {
+            keys.flyDown = 0;
+        }
+
+        if (evt.keyCode == 65 || evt.key == 'ArrowLeft')
+        {
+            keys.left = 0;
+        }
+
+        if (evt.keyCode == 68 || evt.key == 'ArrowRight')
+        {
+            keys.right = 0;
+        }
+
+        if (evt.keyCode == 87 || evt.key == 'ArrowUp')
+        {
+            keys.forward = 0;
+        }
+
+        if (evt.keyCode == 83 || evt.key == 'ArrowDown')
+        {
+            keys.back = 0;
+        }
+
+        action = evt.keyCode;
+
+        console.log(action);
+    }
+
+    //----//
+
+    // LIGHT
+
+    let theLight001Vector = (4700, -2000, -7000);
+
+    // create a light in the scene
+    let light001 = new BABYLON.HemisphericLight("Light001", new BABYLON.Vector3(theLight001Vector), scene);
+
+    light001.intensity = 7.2;
+
+    light001.range = 0.1;
+
+    //----//
+
+    // SKYBOX
+    let skybox = BABYLON.Mesh.CreateBox("sky", 1000.0, scene);
+
+    let skyboxMaterial = new BABYLON.StandardMaterial("sky", scene);
+
+    skyboxMaterial.backFaceCulling = false;
+
+    //----//
+
+    skyboxMaterial.reflectionTexture = new BABYLON.Texture("src/media/textures/sky/sky.jpg");
+
+    // skyboxMaterial.reflectionTexture = new BABYLON.CubeTexture("texture/sky", scene);
+
+    //skyboxMaterial.reflectionTexture.coordinatesMode = BABYLON.Texture.SKYBOX_MODE;
+
+    skyboxMaterial.diffuseColor = new BABYLON.Color3(0, 0, 0);
+
+    skyboxMaterial.specularColor = new BABYLON.Color3(0, 0, 0);
+
+    skybox.material = skyboxMaterial;
+
+    //----//
+
+    // make tutorials in a row
+    function boxMakerRow(whichArray, theX, theY, theZ)
+    {
+        for (let x = 0; x < whichArray.length; x++)
+        {
+            if (x == 10)
+            {
+                theZ += 25; //back and forward
+                theX = -70; // left and right
+            }
+
+            if (x == 20)
+            {
+                theZ += 25;
+                theX = -70;
+            }
+
+            if (x == 30)
+            {
+                theZ += 25;
+                theX = -70;
+            }
+
+            if (x == 40)
+            {
+                theZ += 25;
+                theX = -70;
+            }
+
+            if (x == 50)
+            {
+                theZ += 25;
+                theX = -70;
+            }
+
+            // front of texture orientation
+            let frontSide = new BABYLON.Vector4(0, 0, 1, 1);
+            
+            // back of texutre orientation
+            let backSide = new BABYLON.Vector4(0, 0, -1, 1);
+
+            // create a mesh - CreatePlane for double
+            let theMesh = BABYLON.MeshBuilder.CreatePlane(whichArray[x].name,
+            {
+                width: whichArray[x].theWidth,
+                height: whichArray[x].theHeight,
+                depth: whichArray[x].theDepth,
+                sideOrientation: BABYLON.Mesh.DOUBLESIDE, frontUVs: frontSide, backUVs: backSide
+            }, scene);
+
+            // set theMesh x position
+            theMesh.position.x = theX;
+
+            // set theMesh y position
+            theMesh.position.y = theY;
+
+            theMesh.position.z = theZ;
+
+            // test to flip the back
+            
+            // create a material
+            let theMaterial = new BABYLON.StandardMaterial(whichArray[x].nameOfMaterial, scene);
+
+            /*
+            // if using array of objects to set the color data
+            // set the color of theMaterial
+            theMaterial.diffuseColor = new BABYLON.Color3(whichArray[x].colorR, whichArray[x].colorG, whichArray[x].colorB);
+            */
+
+            // set the color of theMaterial
+            theMaterial.diffuseColor = new BABYLON.Color3(1.0, 1.0, 1.0);
+
+            // no specular glare, by setting it to 0.0, 0.0, 0.0
+            theMaterial.specularColor = new BABYLON.Color3(0.0, 0.0, 0.0);
+
+            // textureSource offline or online
+            if (textureSource == "offline")
+            {
+                theMaterial.diffuseTexture = new BABYLON.Texture(whichArray[x].textureOffline, scene);
+            }
+            else if (textureSource == "online")
+            {
+                theMaterial.diffuseTexture = new BABYLON.Texture(whichArray[x].urlOfTexture, scene);
+            }
+
+            // apply theMaterial to theMesh
+            theMesh.material = theMaterial;
+
+            // each time through this loop, increase theX by 15
+            theX += 15;
+        }
+    }
+
+    let textureExample = [
+        "src/media/textures/screenshots/CATopalian_JavaScript_Markdown_to_HTML_Editor.PNG",
+
+        "src/media/textures/screenshots/CATopalian_JavaScript_File_Navigator.PNG",
+        
+        "src/media/textures/screenshots/CATopalian_JavaScript_Art_Studio.PNG"
+    ];
+
+    // make tutorials in rows of 10
+    function boxMakerRowArray(whichArray, theX, theY, theZ)
+    {
+        // how many boxes per row
+        let boxesPerRow = 10;
+
+        // how much space between boxes (x direction)
+        let xSpacing = 25;
+
+        // how much space between rows (z direction)
+        let zSpacing = 25;
+
+        for (let x = 0; x < whichArray.length; x++)
+        {
+            // calculate which column and which row this box is in
+            let column = x % boxesPerRow;
+            let row = Math.floor(x / boxesPerRow);
+
+            // compute positions based on the row and column
+            let currentX = theX + (column * xSpacing);
+            let currentY = theY;
+            let currentZ = theZ + (row * zSpacing);
+
+            // front of texture orientation
+            let frontSide = new BABYLON.Vector4(0, 0, 1, 1);
+
+            // back of texture orientation
+            let backSide = new BABYLON.Vector4(0, 0, -1, 1);
+
+            // create a mesh
+            let theMesh = BABYLON.MeshBuilder.CreatePlane(whichArray[x],
+            {
+                width: 20,
+                height: 10,
+                depth: 0.25,
+                sideOrientation: BABYLON.Mesh.DOUBLESIDE,
+                frontUVs: frontSide,
+                backUVs: backSide
+            }, scene);
+
+            // set the position
+            theMesh.position.x = currentX;
+            theMesh.position.y = currentY;
+            theMesh.position.z = currentZ;
+
+            // create a material
+            let theMaterial = new BABYLON.StandardMaterial("Material001", scene);
+
+            // set color (white)
+            theMaterial.diffuseColor = new BABYLON.Color3(1.0, 1.0, 1.0);
+
+            // remove glare
+            theMaterial.specularColor = new BABYLON.Color3(0.0, 0.0, 0.0);
+
+            // apply texture using array value
+            theMaterial.diffuseTexture = new BABYLON.Texture(whichArray[x], scene);
+
+            // assign the material
+            theMesh.material = theMaterial;
+        }
+    }
+
+    //-//
+
+    // make tutorials in rows of 10
+    function boxMakerRowAOO(whichArray, theX, theY, theZ)
+    {
+        // how many boxes per row
+        let boxesPerRow = 10;
+
+        // how much space between boxes (x direction)
+        let xSpacing = 25;
+
+        // how much space between rows (z direction)
+        let zSpacing = 25;
+
+        for (let x = 0; x < whichArray.length; x++)
+        {
+            // calculate which column and which row this box is in
+            let column = x % boxesPerRow;
+            let row = Math.floor(x / boxesPerRow);
+
+            // compute positions based on the row and column
+            let currentX = theX + (column * xSpacing);
+            let currentY = theY;
+            let currentZ = theZ + (row * zSpacing);
+
+            // front of texture orientation
+            let frontSide = new BABYLON.Vector4(0, 0, 1, 1);
+
+            // back of texture orientation
+            let backSide = new BABYLON.Vector4(0, 0, -1, 1);
+
+            // create a mesh
+            let theMesh = BABYLON.MeshBuilder.CreatePlane(whichArray[x],
+            {
+                width: 20,
+                height: 10,
+                depth: 0.25,
+                sideOrientation: BABYLON.Mesh.DOUBLESIDE,
+                frontUVs: frontSide,
+                backUVs: backSide
+            }, scene);
+
+            // set the position
+            theMesh.position.x = currentX;
+            theMesh.position.y = currentY;
+            theMesh.position.z = currentZ;
+
+            // create a material
+            let theMaterial = new BABYLON.StandardMaterial("Material001", scene);
+            theMaterial.diffuseColor = new BABYLON.Color3(1.0, 1.0, 1.0);
+            theMaterial.specularColor = new BABYLON.Color3(0.0, 0.0, 0.0);
+            theMaterial.diffuseTexture = new BABYLON.Texture(whichArray[x].textureOffline, scene);
+            theMesh.material = theMaterial;
+
+            // make it clickable
+            theMesh.actionManager = new BABYLON.ActionManager(scene);
+
+            // left click - go to appURL
+            theMesh.actionManager.registerAction(
+                new BABYLON.ExecuteCodeAction(BABYLON.ActionManager.OnPickTrigger, function()
+                {
+                    window.open(whichArray[x].appURL, "_blank");
+                })
+            );
+
+            // right click - go to codeURL
+            theMesh.actionManager.registerAction(
+                new BABYLON.ExecuteCodeAction(BABYLON.ActionManager.OnRightPickTrigger, function()
+                {
+                    window.open(whichArray[x].codeURL, "_blank");
+                })
+            );
+        }
+    }
+
+    // 1st value is left and right
+    // 2nd value is up and down
+    // 3rd value is back and forth
+    boxMakerRow(theTutorials, -70, 5, -50);
+
+    // 1st value is left and right
+    // 2nd value is up and down
+    // 3rd value is back and forth
+    // 2nd floor tutorials
+    boxMakerRowAOO(content, -103, 25, -100);
+
+    // 1st value is left and right
+    // 2nd value is up and down
+    // 3rd value is back and forth
+    boxMakerRowArray(textureExample, -70, 100, -50);
+
+    //----//
+
+    let theTiles =
+    [
+        {
+            name: "cube001",
+            nameOfMaterial: "materialFloorWood001",
+            colorR: 0.1,
+            colorG: 0.1,
+            colorB: 0.1,
+            textureOffline: "src/media/textures/wood/wood_003.jpg"
+        }
+    ];
+
+    //----//
+
+    // makeTiles - makes the floor
+    function makeTiles(whichArray, whichItem, whichX, whichY)
+    {
+        // left and right
+        let xPos = whichX; //-110
+
+        // up and down
+        let yPos = whichY; // 0
+
+        // back and forth
+        let zPos = -125;
+
+        let rows = 25;
+        let columns = 25;
+
+        let sizeX = 10;
+        let sizeY = 0.1;
+        let sizeZ = 10;
+
+        let startingXPosition = xPos;
+
+        // rows
+        for (let j = 0; j < rows; j++)
+        {
+            // correct x position by subtracting the sizeX
+            xPos -= sizeX;
+
+            // columns
+            for (let x = 0; x < columns; x++)
+            {
+                // add the sizeX to xPos
+                xPos = xPos + sizeX;
+
+                // create a mesh
+                let theMesh = BABYLON.MeshBuilder.CreateBox(whichArray[whichItem].name, {
+                    width: sizeX,
+                    height: sizeY,
+                    depth: sizeZ
+                }, scene);
+
+                // set theMesh x position
+                theMesh.position.x = xPos;
+
+                // set theMesh y position
+                theMesh.position.y = yPos;
+
+                theMesh.position.z = zPos;
+
+                // create a material
+                let theMaterial = new BABYLON.StandardMaterial(whichArray[whichItem].nameOfMaterial, scene);
+
+                // set the color of theMaterial
+                theMaterial.diffuseColor = new BABYLON.Color3(whichArray[whichItem].colorR, whichArray[whichItem].colorG, whichArray[whichItem].colorB);
+
+                if (textureSource == "offline")
+                {
+                    theMaterial.diffuseTexture = new BABYLON.Texture(whichArray[whichItem].textureOffline);
+                }
+                if (textureSource == "online")
+                {
+                    theMaterial.diffuseTexture = new BABYLON.Texture(whichArray[whichItem].urlOfTexture);
+                }
+
+                // no specular glare, by setting it to 0, 0, 0
+                theMaterial.specularColor = new BABYLON.Color3(0.0, 0.0, 0.0);
+
+                // apply theMaterial to theMesh
+                theMesh.material = theMaterial;
+            }
+
+            xPos = startingXPosition;
+
+            zPos += sizeZ;
+        }
+    }
+
+    makeTiles(theTiles, 0, -110, 0);
+
+    makeTiles(theTiles, 0, -110, 20);
+
+    //makeTiles(theTiles, 0, -110, 40);
+
+    //makeTiles(theTiles, 0, -110, 60);
+
+    //makeTiles(theTiles, 0, -110, 80);
+
+    //makeTiles(theTiles, 0, -110, 60);
+
+    //makeTiles(theTiles, 0, -110, 80);
+
+    //makeTiles(theTiles, 0, -110, 100);
+
+    //----//
+
+    return scene;
+}
+
+//----//
+
+window.initFunction = async function()
+{
+    let asyncEngineCreation = async function()
+    {
+        try
+        {
+            return createDefaultEngine();
+        }
+        catch(e)
+        {
+            console.log("Creating default Engine instead");
+
+            return createDefaultEngine();
+        }
+    }
+
+    window.engine = await asyncEngineCreation();
+
+    if (!engine) throw 'engine should not be null.';
+
+    startRenderLoop(engine, canvas);
+
+    window.scene = createScene();
+};
+
+//----//
+
+initFunction().then(function()
+{
+    sceneToRender = scene;
+});
+
+//----//
+
+// resize
+window.addEventListener("resize", function()
+{
+    engine.resize();
+});
+
+</script>
+
+</body>
+
+</html>
+
