@@ -6,7 +6,7 @@ let content = [
     appURL: "https://christopherandrewtopalian.github.io/CATopalian_JavaScript_College_of_Scripting/CATopalian_JavaScript_College_of_Scripting.html",
     codeURL: 'https://github.com/ChristopherAndrewTopalian',
     description: "College of Scripting Music & Science (COSMAS)",
-    textureOffline: 'src/media/textures/titles/college_of_scripting_music_and_science_title.png',
+    textureOffline: 'src/media/textures/titles/college_of_scripting_music_and_science_title_002.png',
     // videoURL: 'https://www.youtube.com/channel/UCZs500Udkk72GoeG8KLBK_A'
 },
 
