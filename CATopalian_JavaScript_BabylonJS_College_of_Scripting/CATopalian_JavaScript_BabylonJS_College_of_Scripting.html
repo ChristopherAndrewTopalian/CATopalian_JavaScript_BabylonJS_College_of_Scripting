@@ -652,12 +652,26 @@ let createScene = function()
         floor.position.y = positionY;
         floor.position.z = positionZ;
 
-        // create material with texture
+        // create material
         let floorMat = new BABYLON.StandardMaterial("floorMat", scene);
+        // set the texture
         floorMat.diffuseTexture = new BABYLON.Texture(textureUrl, scene);
-        // tile the texture
-        floorMat.diffuseTexture.uScale = width / 10; // adjust for texture tiling
-        floorMat.diffuseTexture.vScale = depth / 10;
+
+        // increase tiling for smaller, repeating boards
+        // if texture is 1024 wide, and we want 10 repeats across the width:
+        // we adjust uScale and vScale based on desired repetitions
+        // here we use 80 repeats across width and depth:
+        let repeatCount = 80;
+
+        floorMat.diffuseTexture.uScale = repeatCount;
+        floorMat.diffuseTexture.vScale = repeatCount;
+
+        // make the floor darker and less reflective
+        floorMat.diffuseColor = new BABYLON.Color3(0.2, 0.2, 0.2);
+        floorMat.specularColor = new BABYLON.Color3(0, 0, 0);
+        floorMat.emissiveColor = new BABYLON.Color3(0, 0, 0);
+
+        // assign the material
         floor.material = floorMat;
 
         return floor;
