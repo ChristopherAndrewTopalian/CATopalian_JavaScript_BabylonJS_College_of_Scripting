@@ -199,7 +199,7 @@ let createScene = function()
     material001.emissiveColor = new BABYLON.Color3(0, 0.58, 0.86);
 
     // player texture
-    material001.diffuseTexture = new BABYLON.Texture("src/media/textures/sky/sky.jpg");
+    material001.diffuseTexture = new BABYLON.Texture("src/media/textures/sky/sky.png");
 
     // no specular glare, by setting it to 0, 0, 0
     material001.specularColor = new BABYLON.Color3(0.0, 0.0, 0.0);
@@ -375,26 +375,23 @@ let createScene = function()
 
     //----//
 
-    // SKYBOX
-    let skybox = BABYLON.Mesh.CreateBox("sky", 1000.0, scene);
+    let skySphere = BABYLON.MeshBuilder.CreateSphere("skySphere", { segments: 32, diameter: 1000 }, scene);
 
-    let skyboxMaterial = new BABYLON.StandardMaterial("sky", scene);
+    let skyMaterial = new BABYLON.StandardMaterial("skyMat", scene);
+    skyMaterial.backFaceCulling = false;
 
-    skyboxMaterial.backFaceCulling = false;
+    // load sky.png
+    skyMaterial.diffuseTexture = new BABYLON.Texture("src/media/textures/sky/sky.png", scene);
+    skyMaterial.diffuseTexture.uScale = 1;
+    skyMaterial.diffuseTexture.vScale = 1;
+    skyMaterial.diffuseTexture.coordinatesMode = BABYLON.Texture.SPHERICAL_MODE;
 
-    //----//
+    skyMaterial.diffuseColor = new BABYLON.Color3(0, 0, 0);
+    skyMaterial.specularColor = new BABYLON.Color3(0, 0, 0);
+    skyMaterial.emissiveColor = new BABYLON.Color3(1, 1, 1); // makes it glow
 
-    skyboxMaterial.reflectionTexture = new BABYLON.Texture("src/media/textures/sky/sky.jpg");
-
-    // skyboxMaterial.reflectionTexture = new BABYLON.CubeTexture("texture/sky", scene);
-
-    //skyboxMaterial.reflectionTexture.coordinatesMode = BABYLON.Texture.SKYBOX_MODE;
-
-    skyboxMaterial.diffuseColor = new BABYLON.Color3(0, 0, 0);
-
-    skyboxMaterial.specularColor = new BABYLON.Color3(0, 0, 0);
-
-    skybox.material = skyboxMaterial;
+    skySphere.material = skyMaterial;
+    skySphere.infiniteDistance = false; // keeps it fixed relative to camera
 
     //----//
 
