@@ -28,6 +28,15 @@ let botany = [
     // videoURL: ''
 },
 
+{
+    name: "amount_of_room_under_net_pot_inside_cardboard_box",
+    appURL: "https://github.com/ChristopherAndrewTopalian/CATopalian_Organic_Hydroponics",
+    codeURL: 'https://github.com/ChristopherAndrewTopalian/CATopalian_Organic_Hydroponics',
+    description: "Amount of Room Under the Net Pot Inside of the Cardboard Box",
+    textureOffline: 'src/media/textures/botany/cardboard_box/amount_of_room_under_net_pot_inside_cardboard_box.png',
+    // videoURL: ''
+},
+
 ];
 
 //----//
