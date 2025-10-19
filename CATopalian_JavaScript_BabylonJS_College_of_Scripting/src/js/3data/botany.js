@@ -109,6 +109,15 @@ let botany = [
     // videoURL: ''
 },
 
+{
+    name: "nitrification_tower_summarized",
+    appURL: "https://github.com/ChristopherAndrewTopalian/CATopalian_Organic_Hydroponics",
+    codeURL: 'https://github.com/ChristopherAndrewTopalian/CATopalian_Organic_Hydroponics',
+    description: "Nitrification Tower Made by Drilling Holes in the Bottom of a Plastic Container, Filling it with Soil and Adding Urine Daily",
+    textureOffline: 'src/media/textures/botany/nitrification_tower/nitrification_tower_summarized.png',
+    // videoURL: ''
+},
+
 ];
 
 //----//
