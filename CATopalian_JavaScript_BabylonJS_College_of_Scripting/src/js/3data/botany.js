@@ -19,6 +19,15 @@ let botany = [
     // videoURL: ''
 },
 
+{
+    name: "net_pot_installed_in_cardboard_box_cut_out_hole",
+    appURL: "https://github.com/ChristopherAndrewTopalian/CATopalian_Organic_Hydroponics",
+    codeURL: 'https://github.com/ChristopherAndrewTopalian/CATopalian_Organic_Hydroponics',
+    description: "Netpot Installed in the Carboard Box Cut Out Hole",
+    textureOffline: 'src/media/textures/botany/cardboard_box/net_pot_installed_in_cardboard_box_cut_out_hole.png',
+    // videoURL: ''
+},
+
 ];
 
 //----//
