@@ -82,6 +82,15 @@ let botany = [
     // videoURL: ''
 },
 
+{
+    name: "three_inch_net_pot_with_rooting_cube",
+    appURL: "https://github.com/ChristopherAndrewTopalian/CATopalian_Organic_Hydroponics",
+    codeURL: 'https://github.com/ChristopherAndrewTopalian/CATopalian_Organic_Hydroponics',
+    description: "3 Inch Netpot with a Rooting Cube in it.",
+    textureOffline: 'src/media/textures/botany/cardboard_box/three_inch_net_pot_with_rooting_cube.png',
+    // videoURL: ''
+},
+
 ];
 
 //----//
