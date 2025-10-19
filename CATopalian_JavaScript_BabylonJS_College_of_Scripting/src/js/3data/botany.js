@@ -118,6 +118,15 @@ let botany = [
     // videoURL: ''
 },
 
+{
+    name: "hose_on_top_of_nitrification_tower_outside",
+    appURL: "https://github.com/ChristopherAndrewTopalian/CATopalian_Organic_Hydroponics",
+    codeURL: 'https://github.com/ChristopherAndrewTopalian/CATopalian_Organic_Hydroponics',
+    description: "A Funnel Inside of the House with a 6 Foot Hose Directs Urine into the Nitrification Tower Outside on the Ground.",
+    textureOffline: 'src/media/textures/botany/nitrification_tower/hose_on_top_of_nitrification_tower_outside.png',
+    // videoURL: ''
+},
+
 ];
 
 //----//
