@@ -46,6 +46,15 @@ let botany = [
     // videoURL: ''
 },
 
+{
+    name: "three_containers_inside_cardboard_box",
+    appURL: "https://github.com/ChristopherAndrewTopalian/CATopalian_Organic_Hydroponics",
+    codeURL: 'https://github.com/ChristopherAndrewTopalian/CATopalian_Organic_Hydroponics',
+    description: "There is Enough Room for 3 Containers of this Size Inside of the Cardboard Box",
+    textureOffline: 'src/media/textures/botany/cardboard_box/three_containers_inside_cardboard_box.png',
+    // videoURL: ''
+},
+
 ];
 
 //----//
