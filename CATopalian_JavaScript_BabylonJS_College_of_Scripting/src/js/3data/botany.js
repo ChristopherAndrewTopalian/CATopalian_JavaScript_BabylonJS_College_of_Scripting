@@ -91,6 +91,15 @@ let botany = [
     // videoURL: ''
 },
 
+{
+    name: "coconut_husk_to_be_inserted_under_and_around_rooting_cube",
+    appURL: "https://github.com/ChristopherAndrewTopalian/CATopalian_Organic_Hydroponics",
+    codeURL: 'https://github.com/ChristopherAndrewTopalian/CATopalian_Organic_Hydroponics',
+    description: "Coconut Husk to be Inserted Under and Around the Rooting Cube",
+    textureOffline: 'src/media/textures/botany/cardboard_box/coconut_husk_to_be_inserted_under_and_around_rooting_cube.png',
+    // videoURL: ''
+},
+
 ];
 
 //----//
