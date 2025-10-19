@@ -146,11 +146,20 @@ let botany = [
 },
 
 {
-    name: "funnel_with_hose_urinated_in_daily_directs_urine_to_nitrification_tower",
+    name: "funnel_with_hose_directs_urine_to_nitrification_tower_outside",
     appURL: "https://github.com/ChristopherAndrewTopalian/CATopalian_Organic_Hydroponics",
     codeURL: 'https://github.com/ChristopherAndrewTopalian/CATopalian_Organic_Hydroponics',
     description: "A Funnel with a 6 Foot Hose is Urinated in Daily Directing the Urine into the Nitrification Tower, which is Outside",
-    textureOffline: 'src/media/textures/botany/nitrification_tower/funnel_with_hose_urinated_in_daily_directs_urine_to_nitrification_tower.png',
+    textureOffline: 'src/media/textures/botany/nitrification_tower/funnel_with_hose_directs_urine_to_nitrification_tower_outside.png',
+    // videoURL: ''
+},
+
+{
+    name: "funnel_with_hose_directs_urine_to_nitrification_tower_outside_top_view",
+    appURL: "https://github.com/ChristopherAndrewTopalian/CATopalian_Organic_Hydroponics",
+    codeURL: 'https://github.com/ChristopherAndrewTopalian/CATopalian_Organic_Hydroponics',
+    description: "A Funnel with a 6 Foot Hose is Urinated in Daily Directing the Urine into the Nitrification Tower, which is Outside",
+    textureOffline: 'src/media/textures/botany/nitrification_tower/funnel_with_hose_directs_urine_to_nitrification_tower_outside_top_view.png',
     // videoURL: ''
 },
 
