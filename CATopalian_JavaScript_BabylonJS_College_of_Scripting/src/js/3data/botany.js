@@ -73,6 +73,15 @@ let botany = [
     // videoURL: ''
 },
 
+{
+    name: "cardboard_box_system_summarized",
+    appURL: "https://github.com/ChristopherAndrewTopalian/CATopalian_Organic_Hydroponics",
+    codeURL: 'https://github.com/ChristopherAndrewTopalian/CATopalian_Organic_Hydroponics',
+    description: "Plastic Container Humidity Dome on top of the Net Pot which is Installed in the Cardboard Box with Nutrient Container Inside of the Box.",
+    textureOffline: 'src/media/textures/botany/cardboard_box/cardboard_box_system_summarized.png',
+    // videoURL: ''
+},
+
 ];
 
 //----//
