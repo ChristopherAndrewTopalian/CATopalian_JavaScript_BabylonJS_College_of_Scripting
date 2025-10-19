@@ -27,6 +27,8 @@
 
 <script src = "src/js/3data/content.js"></script>
 
+<script src = "src/js/3data/botany.js"></script>
+
 <style>
 
 html
@@ -566,7 +568,7 @@ let createScene = function()
             // create a mesh
             let theMesh = BABYLON.MeshBuilder.CreatePlane(whichArray[x],
             {
-                width: 20,
+                width: 17,
                 height: 10,
                 depth: 0.25,
                 sideOrientation: BABYLON.Mesh.DOUBLESIDE,
@@ -624,6 +626,11 @@ let createScene = function()
     // 2nd value is up and down
     // 3rd value is back and forth
     // boxMakerRowArray(textureExample, -70, 100, -50);
+
+    // 1st value is left and right
+    // 2nd value is up and down
+    // 3rd value is back and forth
+    boxMakerRowAOO(botany, -103, 45, -100);
 
     //----//
 
