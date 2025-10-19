@@ -37,6 +37,15 @@ let botany = [
     // videoURL: ''
 },
 
+{
+    name: "container_under_net_pot_distance",
+    appURL: "https://github.com/ChristopherAndrewTopalian/CATopalian_Organic_Hydroponics",
+    codeURL: 'https://github.com/ChristopherAndrewTopalian/CATopalian_Organic_Hydroponics',
+    description: "Container Under the Net Pot which will contain Nutrient Solution. Distance is very close so seedlings can reach it easily.",
+    textureOffline: 'src/media/textures/botany/cardboard_box/container_under_net_pot_distance.png',
+    // videoURL: ''
+},
+
 ];
 
 //----//
