@@ -55,6 +55,24 @@ let botany = [
     // videoURL: ''
 },
 
+{
+    name: "closing_cardboard_box",
+    appURL: "https://github.com/ChristopherAndrewTopalian/CATopalian_Organic_Hydroponics",
+    codeURL: 'https://github.com/ChristopherAndrewTopalian/CATopalian_Organic_Hydroponics',
+    description: "There is Enough Room for 3 Containers of this Size Inside of the Cardboard Box",
+    textureOffline: 'src/media/textures/botany/cardboard_box/closing_cardboard_box.png',
+    // videoURL: ''
+},
+
+{
+    name: "plastic_container_humidity_dome",
+    appURL: "https://github.com/ChristopherAndrewTopalian/CATopalian_Organic_Hydroponics",
+    codeURL: 'https://github.com/ChristopherAndrewTopalian/CATopalian_Organic_Hydroponics',
+    description: "Plastic Container Used as a Humidity Dome Placed Over the New Seedling.",
+    textureOffline: 'src/media/textures/botany/cardboard_box/plastic_container_humidity_dome.png',
+    // videoURL: ''
+},
+
 ];
 
 //----//
