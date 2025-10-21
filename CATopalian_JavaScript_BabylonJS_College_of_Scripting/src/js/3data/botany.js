@@ -110,60 +110,6 @@ let botany = [
 },
 
 {
-    name: "nitrification_tower_summarized",
-    appURL: "https://github.com/ChristopherAndrewTopalian/CATopalian_Organic_Hydroponics",
-    codeURL: 'https://github.com/ChristopherAndrewTopalian/CATopalian_Organic_Hydroponics',
-    description: "Nitrification Tower Made by Drilling Holes in the Bottom of a Plastic Container, Filling it with Soil and Adding Urine Daily",
-    textureOffline: 'src/media/textures/botany/nitrification_tower/nitrification_tower_summarized.png',
-    // videoURL: ''
-},
-
-{
-    name: "hose_on_top_of_nitrification_tower_outside",
-    appURL: "https://github.com/ChristopherAndrewTopalian/CATopalian_Organic_Hydroponics",
-    codeURL: 'https://github.com/ChristopherAndrewTopalian/CATopalian_Organic_Hydroponics',
-    description: "A Funnel Inside of the House with a 6 Foot Hose Directs Urine into the Nitrification Tower Outside on the Ground.",
-    textureOffline: 'src/media/textures/botany/nitrification_tower/hose_on_top_of_nitrification_tower_outside.png',
-    // videoURL: ''
-},
-
-{
-    name: "hose_on_top_of_nitrification_tower_outside_closer",
-    appURL: "https://github.com/ChristopherAndrewTopalian/CATopalian_Organic_Hydroponics",
-    codeURL: 'https://github.com/ChristopherAndrewTopalian/CATopalian_Organic_Hydroponics',
-    description: "A Funnel Inside of the House with a 6 Foot Hose Directs Urine into the Nitrification Tower Outside on the Ground.",
-    textureOffline: 'src/media/textures/botany/nitrification_tower/hose_on_top_of_nitrification_tower_outside_closer.png',
-    // videoURL: ''
-},
-
-{
-    name: "hose_on_top_of_large_nitrification_tower_outside",
-    appURL: "https://github.com/ChristopherAndrewTopalian/CATopalian_Organic_Hydroponics",
-    codeURL: 'https://github.com/ChristopherAndrewTopalian/CATopalian_Organic_Hydroponics',
-    description: "A Funnel Inside of the House with a 6 Foot Hose Directs Urine into the Nitrification Tower Outside on the Ground.",
-    textureOffline: 'src/media/textures/botany/nitrification_tower/hose_on_top_of_large_nitrification_tower_outside.png',
-    // videoURL: ''
-},
-
-{
-    name: "funnel_with_hose_directs_urine_to_nitrification_tower_outside",
-    appURL: "https://github.com/ChristopherAndrewTopalian/CATopalian_Organic_Hydroponics",
-    codeURL: 'https://github.com/ChristopherAndrewTopalian/CATopalian_Organic_Hydroponics',
-    description: "A Funnel with a 6 Foot Hose is Urinated in Daily Directing the Urine into the Nitrification Tower, which is Outside",
-    textureOffline: 'src/media/textures/botany/nitrification_tower/funnel_with_hose_directs_urine_to_nitrification_tower_outside.png',
-    // videoURL: ''
-},
-
-{
-    name: "funnel_with_hose_directs_urine_to_nitrification_tower_outside_top_view",
-    appURL: "https://github.com/ChristopherAndrewTopalian/CATopalian_Organic_Hydroponics",
-    codeURL: 'https://github.com/ChristopherAndrewTopalian/CATopalian_Organic_Hydroponics',
-    description: "A Funnel with a 6 Foot Hose is Urinated in Daily Directing the Urine into the Nitrification Tower, which is Outside",
-    textureOffline: 'src/media/textures/botany/nitrification_tower/funnel_with_hose_directs_urine_to_nitrification_tower_outside_top_view.png',
-    // videoURL: ''
-},
-
-{
     name: "black_plastic_vhs_container_paper_towels_folded",
     appURL: "https://github.com/ChristopherAndrewTopalian/CATopalian_Organic_Hydroponics",
     codeURL: 'https://github.com/ChristopherAndrewTopalian/CATopalian_Organic_Hydroponics',
@@ -223,6 +169,60 @@ let botany = [
     codeURL: 'https://github.com/ChristopherAndrewTopalian/CATopalian_Organic_Hydroponics',
     description: "Laser Thermometer Measures Inside Temperature of the Black Plastic VHS Container",
     textureOffline: 'src/media/textures/botany/germination/laser_thermometer_measures_inside_temperature_black_plastic_vhs_container.png',
+    // videoURL: ''
+},
+
+{
+    name: "nitrification_tower_summarized",
+    appURL: "https://github.com/ChristopherAndrewTopalian/CATopalian_Organic_Hydroponics",
+    codeURL: 'https://github.com/ChristopherAndrewTopalian/CATopalian_Organic_Hydroponics',
+    description: "Nitrification Tower Made by Drilling Holes in the Bottom of a Plastic Container, Filling it with Soil and Adding Urine Daily",
+    textureOffline: 'src/media/textures/botany/nitrification_tower/nitrification_tower_summarized.png',
+    // videoURL: ''
+},
+
+{
+    name: "hose_on_top_of_nitrification_tower_outside",
+    appURL: "https://github.com/ChristopherAndrewTopalian/CATopalian_Organic_Hydroponics",
+    codeURL: 'https://github.com/ChristopherAndrewTopalian/CATopalian_Organic_Hydroponics',
+    description: "A Funnel Inside of the House with a 6 Foot Hose Directs Urine into the Nitrification Tower Outside on the Ground.",
+    textureOffline: 'src/media/textures/botany/nitrification_tower/hose_on_top_of_nitrification_tower_outside.png',
+    // videoURL: ''
+},
+
+{
+    name: "hose_on_top_of_nitrification_tower_outside_closer",
+    appURL: "https://github.com/ChristopherAndrewTopalian/CATopalian_Organic_Hydroponics",
+    codeURL: 'https://github.com/ChristopherAndrewTopalian/CATopalian_Organic_Hydroponics',
+    description: "A Funnel Inside of the House with a 6 Foot Hose Directs Urine into the Nitrification Tower Outside on the Ground.",
+    textureOffline: 'src/media/textures/botany/nitrification_tower/hose_on_top_of_nitrification_tower_outside_closer.png',
+    // videoURL: ''
+},
+
+{
+    name: "hose_on_top_of_large_nitrification_tower_outside",
+    appURL: "https://github.com/ChristopherAndrewTopalian/CATopalian_Organic_Hydroponics",
+    codeURL: 'https://github.com/ChristopherAndrewTopalian/CATopalian_Organic_Hydroponics',
+    description: "A Funnel Inside of the House with a 6 Foot Hose Directs Urine into the Nitrification Tower Outside on the Ground.",
+    textureOffline: 'src/media/textures/botany/nitrification_tower/hose_on_top_of_large_nitrification_tower_outside.png',
+    // videoURL: ''
+},
+
+{
+    name: "funnel_with_hose_directs_urine_to_nitrification_tower_outside",
+    appURL: "https://github.com/ChristopherAndrewTopalian/CATopalian_Organic_Hydroponics",
+    codeURL: 'https://github.com/ChristopherAndrewTopalian/CATopalian_Organic_Hydroponics',
+    description: "A Funnel with a 6 Foot Hose is Urinated in Daily Directing the Urine into the Nitrification Tower, which is Outside",
+    textureOffline: 'src/media/textures/botany/nitrification_tower/funnel_with_hose_directs_urine_to_nitrification_tower_outside.png',
+    // videoURL: ''
+},
+
+{
+    name: "funnel_with_hose_directs_urine_to_nitrification_tower_outside_top_view",
+    appURL: "https://github.com/ChristopherAndrewTopalian/CATopalian_Organic_Hydroponics",
+    codeURL: 'https://github.com/ChristopherAndrewTopalian/CATopalian_Organic_Hydroponics',
+    description: "A Funnel with a 6 Foot Hose is Urinated in Daily Directing the Urine into the Nitrification Tower, which is Outside",
+    textureOffline: 'src/media/textures/botany/nitrification_tower/funnel_with_hose_directs_urine_to_nitrification_tower_outside_top_view.png',
     // videoURL: ''
 },
 
