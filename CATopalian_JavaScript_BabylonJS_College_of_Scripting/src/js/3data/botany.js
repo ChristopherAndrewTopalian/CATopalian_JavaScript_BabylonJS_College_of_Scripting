@@ -181,6 +181,15 @@ let botany = [
     // videoURL: ''
 },
 
+{
+    name: "paper_towel_folded_over_seed_latex_glove_worn",
+    appURL: "https://github.com/ChristopherAndrewTopalian/CATopalian_Organic_Hydroponics",
+    codeURL: 'https://github.com/ChristopherAndrewTopalian/CATopalian_Organic_Hydroponics',
+    description: "With a Latex Glove Worn to Avoid Mold Spores, We Fold the Paper Towel Over the Seed.",
+    textureOffline: 'src/media/textures/botany/germination/paper_towel_folded_over_seed_latex_glove_worn.png',
+    // videoURL: ''
+},
+
 ];
 
 //----//
