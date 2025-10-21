@@ -10,6 +10,15 @@ let content = [
     // videoURL: 'https://www.youtube.com/channel/UCZs500Udkk72GoeG8KLBK_A'
 },
 
+{
+    name: "Instructions for Controls",
+    appURL: "https://christopherandrewtopalian.github.io/CATopalian_JavaScript_College_of_Scripting/CATopalian_JavaScript_College_of_Scripting.html",
+    codeURL: 'https://github.com/ChristopherAndrewTopalian',
+    description: "Instructions for Controls",
+    textureOffline: 'src/media/textures/instructions/instructions_for_controls.png',
+    // videoURL: 'https://www.youtube.com/channel/UCZs500Udkk72GoeG8KLBK_A'
+},
+
     {
     name: "CATopalian JavaScript Markdown to HTML Editor",
     appURL: "https://christopherandrewtopalian.github.io/CATopalian_JavaScript_Markdown_to_HTML_Editor/CATopalian_JavaScript_Markdown_to_HTML_Editor.html",
