@@ -163,6 +163,15 @@ let botany = [
     // videoURL: ''
 },
 
+{
+    name: "black_plastic_vhs_container_paper_towels_folded",
+    appURL: "https://github.com/ChristopherAndrewTopalian/CATopalian_Organic_Hydroponics",
+    codeURL: 'https://github.com/ChristopherAndrewTopalian/CATopalian_Organic_Hydroponics',
+    description: "Black Plastic VHS Container with Folded Paper Towels for the Seeds to be Placed In",
+    textureOffline: 'src/media/textures/botany/germination/black_plastic_vhs_container_paper_towels_folded.png',
+    // videoURL: ''
+},
+
 ];
 
 //----//
