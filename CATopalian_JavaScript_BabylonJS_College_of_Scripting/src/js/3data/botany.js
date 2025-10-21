@@ -208,6 +208,15 @@ let botany = [
     // videoURL: ''
 },
 
+{
+    name: "laser_thermometer_measures_surface_temperature_black_plastic_vhs_container",
+    appURL: "https://github.com/ChristopherAndrewTopalian/CATopalian_Organic_Hydroponics",
+    codeURL: 'https://github.com/ChristopherAndrewTopalian/CATopalian_Organic_Hydroponics',
+    description: "Laser Thermometer Measures Surface Temperature of the Black Plastic VHS Container",
+    textureOffline: 'src/media/textures/botany/germination/laser_thermometer_measures_surface_temperature_black_plastic_vhs_container.png',
+    // videoURL: ''
+},
+
 ];
 
 //----//
