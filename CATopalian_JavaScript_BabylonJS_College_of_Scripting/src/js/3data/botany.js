@@ -172,6 +172,15 @@ let botany = [
     // videoURL: ''
 },
 
+{
+    name: "dark_seed_color_strong_plant",
+    appURL: "https://github.com/ChristopherAndrewTopalian/CATopalian_Organic_Hydroponics",
+    codeURL: 'https://github.com/ChristopherAndrewTopalian/CATopalian_Organic_Hydroponics',
+    description: "The Seed Being Dark is a Good Sign that it will be a Strong Plant.",
+    textureOffline: 'src/media/textures/botany/germination/dark_seed_color_strong_plant.png',
+    // videoURL: ''
+},
+
 ];
 
 //----//
