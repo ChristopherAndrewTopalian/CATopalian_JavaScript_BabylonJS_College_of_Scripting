@@ -199,6 +199,15 @@ let botany = [
     // videoURL: ''
 },
 
+{
+    name: "incandescent_bulb_heats_up_black_plastic_vhs_container",
+    appURL: "https://github.com/ChristopherAndrewTopalian/CATopalian_Organic_Hydroponics",
+    codeURL: 'https://github.com/ChristopherAndrewTopalian/CATopalian_Organic_Hydroponics',
+    description: "Incandescent Bulb is Used to Direct Light onto the Black Plastic VHS Case Surface to Heat Up the Interior.",
+    textureOffline: 'src/media/textures/botany/germination/incandescent_bulb_heats_up_black_plastic_vhs_container.png',
+    // videoURL: ''
+},
+
 ];
 
 //----//
