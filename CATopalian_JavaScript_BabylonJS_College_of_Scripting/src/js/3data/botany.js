@@ -280,6 +280,15 @@ let botany = [
     // videoURL: ''
 },
 
+{
+    name: "light_on_lowest_setting_7_inches_from_top_of_dome_170_ppfd",
+    appURL: "https://github.com/ChristopherAndrewTopalian/CATopalian_Organic_Hydroponics",
+    codeURL: 'https://github.com/ChristopherAndrewTopalian/CATopalian_Organic_Hydroponics',
+    description: "The Light On Its Lowest Setting is About 7” Over the Top of the Dome. 170 PPFD Was Measured Using a Cell Phone Light Sensor App",
+    textureOffline: 'src/media/textures/botany/germination/light_on_lowest_setting_7_inches_from_top_of_dome_170_ppfd.png',
+    // videoURL: ''
+},
+
 ];
 
 //----//
