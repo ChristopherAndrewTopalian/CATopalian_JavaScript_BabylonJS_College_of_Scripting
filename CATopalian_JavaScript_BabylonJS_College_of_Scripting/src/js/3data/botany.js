@@ -289,6 +289,15 @@ let botany = [
     // videoURL: ''
 },
 
+{
+    name: "sprout_shown_inside_of_germination_chamber",
+    appURL: "https://github.com/ChristopherAndrewTopalian/CATopalian_Organic_Hydroponics",
+    codeURL: 'https://github.com/ChristopherAndrewTopalian/CATopalian_Organic_Hydroponics',
+    description: "We See the Sprout Inside of the Germination Chamber",
+    textureOffline: 'src/media/textures/botany/germination/sprout_shown_inside_of_germination_chamber.png',
+    // videoURL: ''
+},
+
 ];
 
 //----//
