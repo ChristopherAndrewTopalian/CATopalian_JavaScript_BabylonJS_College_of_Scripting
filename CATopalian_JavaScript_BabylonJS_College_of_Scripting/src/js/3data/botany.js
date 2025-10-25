@@ -298,6 +298,15 @@ let botany = [
     // videoURL: ''
 },
 
+{
+    name: "sprout_shown_without_plastic_dome_on_top",
+    appURL: "https://github.com/ChristopherAndrewTopalian/CATopalian_Organic_Hydroponics",
+    codeURL: 'https://github.com/ChristopherAndrewTopalian/CATopalian_Organic_Hydroponics',
+    description: "We See the Sprout  Without the Plastic Dome On Top",
+    textureOffline: 'src/media/textures/botany/germination/sprout_shown_without_plastic_dome_on_top.png',
+    // videoURL: ''
+},
+
 ];
 
 //----//
