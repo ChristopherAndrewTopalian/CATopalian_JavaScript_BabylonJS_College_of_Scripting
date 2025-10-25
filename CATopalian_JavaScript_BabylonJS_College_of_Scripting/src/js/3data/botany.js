@@ -271,6 +271,15 @@ let botany = [
     // videoURL: ''
 },
 
+{
+    name: "spray_water_with_spray_bottle_inside_top_dome",
+    appURL: "https://github.com/ChristopherAndrewTopalian/CATopalian_Organic_Hydroponics",
+    codeURL: 'https://github.com/ChristopherAndrewTopalian/CATopalian_Organic_Hydroponics',
+    description: "We Spray Water with a Spray Bottle Inside of the Top Dome to Water Them",
+    textureOffline: 'src/media/textures/botany/germination/spray_water_with_spray_bottle_inside_top_dome.png',
+    // videoURL: ''
+},
+
 ];
 
 //----//
