@@ -262,6 +262,15 @@ let botany = [
     // videoURL: ''
 },
 
+{
+    name: "two_germination_chambers_with_added_water_above_and_water_below",
+    appURL: "https://github.com/ChristopherAndrewTopalian/CATopalian_Organic_Hydroponics",
+    codeURL: 'https://github.com/ChristopherAndrewTopalian/CATopalian_Organic_Hydroponics',
+    description: "Two Germination Chambers with Added Water Above & Water Below",
+    textureOffline: 'src/media/textures/botany/germination/two_germination_chambers_with_added_water_above_and_water_below.png',
+    // videoURL: ''
+},
+
 ];
 
 //----//
