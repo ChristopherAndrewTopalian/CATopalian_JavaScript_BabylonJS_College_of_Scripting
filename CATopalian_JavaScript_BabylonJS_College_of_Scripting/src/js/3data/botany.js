@@ -307,6 +307,15 @@ let botany = [
     // videoURL: ''
 },
 
+{
+    name: "bottom_half_of_germination_chamber_water_added_up_to_bottom_of_net_pot",
+    appURL: "https://github.com/ChristopherAndrewTopalian/CATopalian_Organic_Hydroponics",
+    codeURL: 'https://github.com/ChristopherAndrewTopalian/CATopalian_Organic_Hydroponics',
+    description: "Here is the Bottom Half of the Germination Chamber with Net Pot. We Add Water Up To the Bottom of the Net Pot",
+    textureOffline: 'src/media/textures/botany/germination/bottom_half_of_germination_chamber_water_added_up_to_bottom_of_net_pot.png',
+    // videoURL: ''
+},
+
 ];
 
 //----//
