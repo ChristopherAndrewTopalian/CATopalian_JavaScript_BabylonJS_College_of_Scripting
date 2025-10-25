@@ -316,6 +316,15 @@ let botany = [
     // videoURL: ''
 },
 
+{
+    name: "lid_on_top_of_germination_chamber",
+    appURL: "https://github.com/ChristopherAndrewTopalian/CATopalian_Organic_Hydroponics",
+    codeURL: 'https://github.com/ChristopherAndrewTopalian/CATopalian_Organic_Hydroponics',
+    description: "We Seal Our Germination Chamber with a Plastic Lid On Top. Water is in the Bottom Container the Net Pot is Sitting In",
+    textureOffline: 'src/media/textures/botany/germination/lid_on_top_of_germination_chamber.png',
+    // videoURL: ''
+},
+
 ];
 
 //----//
