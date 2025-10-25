@@ -235,6 +235,15 @@ let botany = [
     // videoURL: ''
 },
 
+{
+    name: "two_seeds_shown_paper_towel_not_yet_folded_over_them_close_up",
+    appURL: "https://github.com/ChristopherAndrewTopalian/CATopalian_Organic_Hydroponics",
+    codeURL: 'https://github.com/ChristopherAndrewTopalian/CATopalian_Organic_Hydroponics',
+    description: "Two Seeds Shown with the Paper Towel Not Yet Folded Over Them - Close Up",
+    textureOffline: 'src/media/textures/botany/germination/two_seeds_shown_paper_towel_not_yet_folded_over_them_close_up.png',
+    // videoURL: ''
+},
+
 ];
 
 //----//
