@@ -59,7 +59,7 @@ let botany = [
     name: "closing_cardboard_box",
     appURL: "https://github.com/ChristopherAndrewTopalian/CATopalian_Organic_Hydroponics",
     codeURL: 'https://github.com/ChristopherAndrewTopalian/CATopalian_Organic_Hydroponics',
-    description: "There is Enough Room for 3 Containers of this Size Inside of the Cardboard Box",
+    description: "There are Multiple Ways to Close the Cardboard Box to keep the Light from hitting the Nutrient Solution Container.",
     textureOffline: 'src/media/textures/botany/cardboard_box/closing_cardboard_box.png',
     // videoURL: ''
 },
