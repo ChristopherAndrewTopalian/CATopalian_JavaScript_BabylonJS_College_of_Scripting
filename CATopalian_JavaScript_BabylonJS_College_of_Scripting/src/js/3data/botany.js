@@ -325,6 +325,24 @@ let botany = [
     // videoURL: ''
 },
 
+{
+    name: "soil_title",
+    appURL: "https://github.com/ChristopherAndrewTopalian/CATopalian_Organic_Hydroponics",
+    codeURL: 'https://github.com/ChristopherAndrewTopalian/CATopalian_Organic_Hydroponics',
+    description: "Soil Title",
+    textureOffline: 'src/media/textures/botany/soil/soil_title.png',
+    // videoURL: ''
+},
+
+{
+    name: "soak_soil_multiple_days_in_hydrogen_peroxide_water_to_reduce_pests",
+    appURL: "https://github.com/ChristopherAndrewTopalian/CATopalian_Organic_Hydroponics",
+    codeURL: 'https://github.com/ChristopherAndrewTopalian/CATopalian_Organic_Hydroponics',
+    description: "We Soak Outdoor Soil in 3% Hydrogen Peroxide Water for 15 Days to Reduce Pests",
+    textureOffline: 'src/media/textures/botany/soil/sterilization/soak_soil_multiple_days_in_hydrogen_peroxide_water_to_reduce_pests.png',
+    // videoURL: ''
+},
+
 ];
 
 //----//

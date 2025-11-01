@@ -17,17 +17,19 @@
 
 <!-- local source for the engine file -->
 
-<script src="src/js/0engine/babylon.js"></script>
+<script src= 'src/js/0engine/babylon.js'></script>
+
+<script src = 'src/js/0engine/babylon.objFileLoader.js'></script>
 
 <!-- data -->
 
-<script src = "src/js/3data/tutorials.js"></script>
+<script src = 'src/js/3data/tutorials.js'></script>
 
-<script src = "src/js/3data/cubes.js"></script>
+<script src = 'src/js/3data/cubes.js'></script>
 
-<script src = "src/js/3data/content.js"></script>
+<script src = 'src/js/3data/content.js'></script>
 
-<script src = "src/js/3data/botany.js"></script>
+<script src = 'src/js/3data/botany.js'></script>
 
 <style>
 
@@ -757,6 +759,30 @@ let createScene = function()
     makeFloor(scene, 500, 500, 0, 80, 0, "src/media/textures/wood/wood_003.jpg");
 
     makeFloor(scene, 500, 500, 0, 100, 0, "src/media/textures/wood/wood_003.jpg");
+
+    // no splash screens
+    BABYLON.SceneLoader.ShowLoadingScreen = false;
+    engine.displayLoadingUI = function()
+    {
+        // override default to show nothing
+    };
+
+    //-//
+
+    /*
+    // import obj model without showing the loading screen
+    BABYLON.SceneLoader.ImportMesh("", "src/objects/", "box.obj", scene, function(meshes)
+    {
+        console.log("object loaded");
+    });
+    */
+
+    // load a box.obj that was exported from blender
+    BABYLON.SceneLoader.Append("src/objects/", "box.obj", scene, function ()
+    {
+        // model loaded successfully
+        console.log("obj loaded");
+    });
 
     //----//
 

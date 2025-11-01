@@ -210,6 +210,14 @@ A Funnel with a 6 Foot Hose is Urinated in Daily Directing the Urine into the Ni
 
 ---
 
+### **Soil**
+![Soil](../../media/textures/botany/soil/soil_title.png)
+
+### **soak_soil_multiple_days_in_hydrogen_peroxide_water_to_reduce_pests**
+![soak_soil_multiple_days_in_hydrogen_peroxide_water_to_reduce_pests](../../media/textures/botany/soil/sterilization/soak_soil_multiple_days_in_hydrogen_peroxide_water_to_reduce_pests.png)
+
+---
+
 //----//
 
 // Dedicated to God the Father  
