@@ -222,6 +222,9 @@ A Funnel with a 6 Foot Hose is Urinated in Daily Directing the Urine into the Ni
 ### **we_utilize_a_tall_cylinder_for_tall_plant_growth_using_less_material**
 ![we_utilize_a_tall_cylinder_for_tall_plant_growth_using_less_material](../../media/textures/botany/pots/tall_cylinder/we_utilize_a_tall_cylinder_for_tall_plant_growth_using_less_material.png)
 
+### **we_utilize_a_tall_cylinder_for_tall_plant_growth_using_less_material_002**
+![we_utilize_a_tall_cylinder_for_tall_plant_growth_using_less_material_002](../../media/textures/botany/pots/tall_cylinder/we_utilize_a_tall_cylinder_for_tall_plant_growth_using_less_material_002.png)
+
 ---
 
 //----//
