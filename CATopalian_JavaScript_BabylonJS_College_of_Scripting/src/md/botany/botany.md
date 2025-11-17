@@ -243,8 +243,8 @@ This also uses 95% less Water, and 95% less Fertlizer than a 5 gallon pot.
 ---
 
 # The Mix: 
-60% Coconut Husk
-40% Worm Castings
+70% Coconut Husk
+30% Worm Castings
 
 Outcome: Possible Root issues if Perlite is not used.
 
