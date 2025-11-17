@@ -238,6 +238,16 @@ A 2' Foot by 1.5" Diameter Cylinder requires only 259 grams of Coconut Husk to S
 
 This means the Cylinder method is about 90% more efficient than using a 5 gallon pot.
 
+This uses 90% less Water, and 90% less fertlizer than a 5 gallon pot.
+
+---
+
+# The Mix: 
+60% Coconut Husk
+40% Worm Castings
+
+Outcome: Possible Root issues if Perlite is not used.
+
 ---
 
 //----//
