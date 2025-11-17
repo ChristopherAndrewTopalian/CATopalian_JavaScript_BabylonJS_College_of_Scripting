@@ -234,6 +234,10 @@ A Funnel with a 6 Foot Hose is Urinated in Daily Directing the Urine into the Ni
 ### **we_utilize_a_tall_cylinder_for_tall_plant_growth_using_less_material_005**
 ![we_utilize_a_tall_cylinder_for_tall_plant_growth_using_less_material_005](../../media/textures/botany/pots/tall_cylinder/we_utilize_a_tall_cylinder_for_tall_plant_growth_using_less_material_005.png)
 
+A 2' Foot by 1.5" Diameter Cylinder requires only 259 grams of Coconut Husk to Solidly Fill to the Top.
+
+This means the Cylinder method is about 90% more efficient than using a 5 gallon pot.
+
 ---
 
 //----//
