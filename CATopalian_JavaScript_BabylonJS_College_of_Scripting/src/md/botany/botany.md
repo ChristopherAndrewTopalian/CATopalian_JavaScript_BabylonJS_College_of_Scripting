@@ -234,11 +234,11 @@ A Funnel with a 6 Foot Hose is Urinated in Daily Directing the Urine into the Ni
 ### **we_utilize_a_tall_cylinder_for_tall_plant_growth_using_less_material_005**
 ![we_utilize_a_tall_cylinder_for_tall_plant_growth_using_less_material_005](../../media/textures/botany/pots/tall_cylinder/we_utilize_a_tall_cylinder_for_tall_plant_growth_using_less_material_005.png)
 
-A 2' Foot by 1.5" Diameter Cylinder requires only 259 grams of Coconut Husk to Solidly Fill to the Top.
+A 22" Long by 1.5" Diameter Cylinder requires only 340 grams of Coconut Husk to Solidly Fill to the Top.
 
-This means the Cylinder method is about 90% more efficient than using a 5 gallon pot.
+This means the Cylinder method is about 95% more efficient than using a 5 gallon pot.
 
-This also uses 90% less Water, and 90% less Fertlizer than a 5 gallon pot.
+This also uses 95% less Water, and 95% less Fertlizer than a 5 gallon pot.
 
 ---
 
@@ -249,6 +249,11 @@ This also uses 90% less Water, and 90% less Fertlizer than a 5 gallon pot.
 Outcome: Possible Root issues if Perlite is not used.
 
 ---
+
+### **coconut_husk_340g_to_fill_a_22_inch_by_1_and_a_half_inch_diameter_cylinder**
+![coconut_husk_340g_to_fill_a_22_inch_by_1_and_a_half_inch_diameter_cylinder](../../media/textures/botany/pots/tall_cylinder/coconut_husk_340g_to_fill_a_22_inch_by_1_and_a_half_inch_diameter_cylinder.png)
+
+
 
 //----//
 
