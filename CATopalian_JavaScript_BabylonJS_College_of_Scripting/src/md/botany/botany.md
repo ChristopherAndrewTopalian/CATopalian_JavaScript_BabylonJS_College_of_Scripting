@@ -281,6 +281,9 @@ Outcome: Possible Root issues if Perlite is not used.
 ### **inserted_plastic_square_leg_sits_on_top_of_a_plastic_saucer**
 ![inserted_plastic_square_leg_sits_on_top_of_a_plastic_saucer](../../media/textures/botany/pots/tall_cylinder/inserted_plastic_square_leg_sits_on_top_of_a_plastic_saucer.png)
 
+### **inserted_square_plastic_leg_in_cardboard_box_sitting_on_plastic_saucer**
+![inserted_square_plastic_leg_in_cardboard_box_sitting_on_plastic_saucer](../../media/textures/botany/pots/tall_cylinder/inserted_square_plastic_leg_in_cardboard_box_sitting_on_plastic_saucer.png)
+
 //----//
 
 // Dedicated to God the Father  
