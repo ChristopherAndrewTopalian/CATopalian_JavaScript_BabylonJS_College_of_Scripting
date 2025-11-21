@@ -284,6 +284,9 @@ Outcome: Possible Root issues if Perlite is not used.
 ### **inserted_square_plastic_leg_in_cardboard_box_sitting_on_plastic_saucer**
 ![inserted_square_plastic_leg_in_cardboard_box_sitting_on_plastic_saucer](../../media/textures/botany/pots/tall_cylinder/inserted_square_plastic_leg_in_cardboard_box_sitting_on_plastic_saucer.png)
 
+### **we_insert_the_seedling_into_the_growing_medium**
+![we_insert_the_seedling_into_the_growing_medium](../../media/textures/botany/pots/tall_cylinder/we_insert_the_seedling_into_the_growing_medium.png)
+
 //----//
 
 // Dedicated to God the Father  
