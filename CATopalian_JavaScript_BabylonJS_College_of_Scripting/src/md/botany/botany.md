@@ -275,6 +275,8 @@ Outcome: Possible Root issues if Perlite is not used.
 ### **square_plastic_table_leg_100g_coconut_husk_100g_worm_castings_002**
 ![square_plastic_table_leg_100g_coconut_husk_100g_worm_castings_002](../../media/textures/botany/pots/tall_cylinder/square_plastic_table_leg_100g_coconut_husk_100g_worm_castings_002.png)
 
+### **inserted_plastic_square_leg_into_a_cardboard_box**
+![inserted_plastic_square_leg_into_a_cardboard_box](../../media/textures/botany/pots/tall_cylinder/inserted_plastic_square_leg_into_a_cardboard_box.png)
 
 //----//
 
