@@ -267,6 +267,13 @@ Outcome: Possible Root issues if Perlite is not used.
 ### **coconut_husk_340g_to_fill_a_22_inch_by_1_and_a_half_inch_diameter_cylinder**
 ![coconut_husk_340g_to_fill_a_22_inch_by_1_and_a_half_inch_diameter_cylinder](../../media/textures/botany/pots/tall_cylinder/coconut_husk_340g_to_fill_a_22_inch_by_1_and_a_half_inch_diameter_cylinder.png)
 
+---
+
+### **square_plastic_table_leg_100g_coconut_husk_100g_worm_castings**
+![square_plastic_table_leg_100g_coconut_husk_100g_worm_castings](../../media/textures/botany/pots/tall_cylinder/square_plastic_table_leg_100g_coconut_husk_100g_worm_castings.png)
+
+
+
 
 
 //----//
