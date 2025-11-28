@@ -1,19 +1,5 @@
 # Botany
 
-# LESSON ONE:
-1. Do NOT do Hydro inside without adequate ventillation!
-This is more obvious with organics, but listen, the same issue is happening with the chemical versions. At no time should a person grow any plants in a house without proper ventillation going 24/7!
-
-2. The nitrification tower will NOT nitrify in cold weather and instead will result in only ammonium that will burn the roots and plant leafs.
-
-3. Without compost the nitrification tower is almost guranteed to fail and not nitrify, due to a lack of nitrifying bacteria, from a lack of compost!.
-
-4. Do NOT put worm castings in the water or it will smell horrible!
-
-5. If you don't have REALLY GOOD VENTILLATION then don't grow plants indoors due to the chemical dangers associated with the things needed to achieve the plants optimal growth.
-
----
-
 ### **black_plastic_vhs_container_paper_towels_folded**
 Black Plastic VHS Container with Folded Paper Towels for the Seeds to be Placed In
 ![black_plastic_vhs_container_paper_towels_folded](../../media/textures/botany/germination/black_plastic_vhs_container_paper_towels_folded.png)
