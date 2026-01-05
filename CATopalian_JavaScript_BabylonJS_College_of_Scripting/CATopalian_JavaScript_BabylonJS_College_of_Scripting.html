@@ -33,6 +33,8 @@
 
 <script src = 'src/js/3data/thin_wiretronics.js'></script>
 
+<script src = 'src/js/3data/scripts/py/python_scripting_book_1.js'></script>
+
 <style>
 
 html
@@ -592,16 +594,16 @@ let createScene = function()
     //-//
 
     // make tutorials in rows of 10
-    function boxMakerRowAOO(whichArray, theX, theY, theZ)
+    function boxMakerRowAOO(whichArray, theX, theY, theZ, theWidth, theHeight, theXSpacing, theYSpacing)
     {
         // how many boxes per row
         let boxesPerRow = 10;
 
         // how much space between boxes (x direction)
-        let xSpacing = 25;
+        let xSpacing = theXSpacing;
 
         // how much space between rows (z direction)
-        let zSpacing = 20;
+        let zSpacing = theYSpacing;
 
         for (let x = 0; x < whichArray.length; x++)
         {
@@ -623,8 +625,8 @@ let createScene = function()
             // create a mesh
             let theMesh = BABYLON.MeshBuilder.CreatePlane(whichArray[x],
             {
-                width: 17, // 18
-                height: 10, // 10
+                width: theWidth, // 18
+                height: theHeight, // 10
                 depth: 0.25,
                 sideOrientation: BABYLON.Mesh.DOUBLESIDE,
                 frontUVs: frontSide,
@@ -682,26 +684,45 @@ let createScene = function()
     // 3rd value is back and forth
     boxMakerRow(theTutorials, -70, 5, -50);
 
-    // 1st value is left and right
-    // 2nd value is up and down
-    // 3rd value is back and forth
-    // 2nd floor tutorials
-    boxMakerRowAOO(content, -103, 25, -100);
+    // 1st value is whichArray
+    // 2nd value is left and right
+    // 3rd value is up and down
+    // 4th value is back and forth
+    // 5th value is theWidth
+    // 6th value is theHeight
+    // 7th value is theXspacing
+    // 8th value is theYspacing
+    boxMakerRowAOO(content, -103, 25, -100, 17, 10, 25, 20);
 
-    // 1st value is left and right
-    // 2nd value is up and down
-    // 3rd value is back and forth
-    boxMakerRowAOO(botany, -103, 45, -100);
+    // 1st value is whichArray
+    // 2nd value is left and right
+    // 3rd value is up and down
+    // 4th value is back and forth
+    // 5th value is theWidth
+    // 6th value is theHeight
+    // 7th value is theXspacing
+    // 8th value is theYspacing
+    boxMakerRowAOO(botany, -103, 45, -100, 17, 10, 25, 20);
 
-    // 1st value is left and right
-    // 2nd value is up and down
-    // 3rd value is back and forth
-    boxMakerRowAOO(thin_wiretronics, -103, 65, -100);
+    // 1st value is whichArray
+    // 2nd value is left and right
+    // 3rd value is up and down
+    // 4th value is back and forth
+    // 5th value is theWidth
+    // 6th value is theHeight
+    // 7th value is theXspacing
+    // 8th value is theYspacing
+    boxMakerRowAOO(thin_wiretronics, -103, 65, -100, 17, 10, 25, 20);
 
-    // 1st value is left and right
-    // 2nd value is up and down
-    // 3rd value is back and forth
-    // boxMakerRowArray(textureExample, -70, 100, -50);
+    // 1st value is whichArray
+    // 2nd value is left and right
+    // 3rd value is up and down
+    // 4th value is back and forth
+    // 5th value is theWidth
+    // 6th value is theHeight
+    // 7th value is theXspacing
+    // 8th value is theYspacing
+    boxMakerRowAOO(python_scripting_book_1, -103, 85, -100, 10, 10, 12, 20);
 
     //----//
 
