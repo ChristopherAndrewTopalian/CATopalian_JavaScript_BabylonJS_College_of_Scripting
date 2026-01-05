@@ -15,7 +15,7 @@ let createDefaultEngine = function()
 
 ----
 
-## The Right Way
+## The Right Way:
 ```javascript
 let createDefaultEngine = function()
 {
