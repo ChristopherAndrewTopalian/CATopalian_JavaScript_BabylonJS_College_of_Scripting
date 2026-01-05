@@ -46,7 +46,7 @@ In 2D Canvas, we scaled the *drawing context*. In Babylon (which uses WebGL), we
 
 ### Professional Tip: The Resize Listener
 
-Since you are using a big TV, if you ever resize the window or move it to a different screen, the canvas might get blurry again. Always include this snippet in your `whenLoaded` function:
+If you are using a big TV: if you ever resize the window or move it to a different screen, the canvas might get blurry again. Always include this snippet in your `whenLoaded` function:
 
 ```javascript
 window.addEventListener("resize", function () {
