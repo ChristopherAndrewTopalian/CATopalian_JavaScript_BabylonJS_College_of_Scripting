@@ -1,5 +1,5 @@
 <!-- Dedicated to God the Father -->
-<!-- All Rights Reserved Christopher Topalian Copyright 2000-2025 -->
+<!-- All Rights Reserved Christopher Topalian Copyright 2000-2026 -->
 <!-- https://github.com/ChristopherTopalian -->
 <!-- https://github.com/ChristopherAndrewTopalian -->
 <!-- CATopalian_JavaScript_BabylonJS_College_of_Scripting.html -->
@@ -9,6 +9,10 @@
 <head>
 
 <title> CATopalian JavaScript BabylonJS College of Scripting </title>
+
+<meta charset = 'UTF-8'>
+
+<meta name = 'viewport' content = 'width = device-width, initial-scale = 1.0'>
 
 <!-- internet source for the engine file - cdn version -->
 <!--
@@ -131,17 +135,17 @@ let createScene = function()
     // CAMERA
 
     let camera = new BABYLON.ArcRotateCamera(
-    'arcCamera1', 
-    // alpha: 90 degrees, looking along Z axis
-    -Math.PI / 2,
-    // beta: degrees up/down
-    Math.PI / 2,
-    // radius is distance from player
-    2,
-    // target at origin
-    new BABYLON.Vector3(0, 0, 0),
-    scene
-);
+        'arcCamera1', 
+        // alpha: 90 degrees, looking along Z axis
+        -Math.PI / 2,
+        // beta: degrees up/down
+        Math.PI / 2,
+        // radius is distance from player
+        2,
+        // target at origin
+        new BABYLON.Vector3(0, 0, 0),
+        scene
+    );
 
     /*
     // alternative camera setting
@@ -848,9 +852,16 @@ let createScene = function()
 
     //-//
 
+    BABYLON.SceneLoader.ImportMesh("", "src/objects/", "box_open/box_open.obj", scene, function(meshes) {
+    // meshes[0] is typically the root or the first part of your box
+    meshes[0].position = new BABYLON.Vector3(0, 5, 0); 
+    
+    console.log("Box moved to height 5");
+    });
+
     /*
     // import obj model without showing the loading screen
-    BABYLON.SceneLoader.ImportMesh("", "src/objects/", "box.obj", scene, function(meshes)
+    BABYLON.SceneLoader.ImportMesh("", "src/objects/", "box_open/box_open.obj", scene, function(meshes)
     {
         console.log("object loaded");
     });
